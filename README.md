@@ -5,7 +5,9 @@ This project is a multi-agent AI assistant for child welfare, built using the Op
 :
 
 🧱 Project Structure Overview
+
 🔹 1. queen_fairy (Main Agent)
+
 Type: Agent
 
 Role: Main routing agent.
@@ -18,6 +20,7 @@ Key Feature: Uses handoffs to connect to 4 sub-agents.
 Each sub-agent has a focused role based on a child's specific welfare need:
 
 🧚‍♀️ caring_fairy_health
+
 Role: Child health.
 
 Instructions: Talks about vaccines, treatment, and health care.
@@ -27,6 +30,7 @@ UNICEF Strategy: Health supplies, immunization, and health worker training.
 Current Status: Must provide a real-world 2025 health update from UNICEF or global data.
 
 🧚‍♀️ caring_fairy_education
+
 Role: Child education.
 
 Instructions: Ensures school attendance and quality learning.
@@ -36,6 +40,7 @@ UNICEF Strategy: Improve access, train teachers.
 Current Status: Gives a brief 2025 update on education globally or via UNICEF.
 
 🧚‍♀️ caring_fairy_safeguard
+
 Role: Child protection.
 
 Instructions: Prevent abuse, labor, and exploitation.
@@ -45,6 +50,7 @@ UNICEF Strategy: Legal support and rights advocacy.
 Current Status: Summarizes child protection globally in 2025.
 
 🧚‍♀️ caring_fairy_nourishing
+
 Role: Child nutrition.
 
 Instructions: Ensures children receive proper nutrition and avoids malnutrition.
@@ -54,6 +60,7 @@ UNICEF Strategy: Feeding programs, food aid, awareness.
 Current Status: Gives a real-time 2025 nutrition update with impact from UNICEF.
 
 🔹 3. RunConfig → config
+
 Type: RunConfig
 
 Purpose: Defines model provider, whether tracing is on, etc.
@@ -67,6 +74,7 @@ Disables tracing
 Config is passed to the Runner.
 
 🔹 4. Runner.run_sync(...)
+
 Module: agents.Runner
 
 Role: Executes agent logic.
@@ -76,9 +84,11 @@ Used In: chatbot.py
 Function: Calls queen_fairy with user input and handles internal routing + response building.
 
 🔹 5. chatbot.py (Chainlit UI)
+
 Framework: Chainlit
 
 Events:
+*******
 
 @cl.on_chat_start: Greets the user.
 
